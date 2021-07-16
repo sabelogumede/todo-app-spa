@@ -7,7 +7,6 @@ import { Todo } from '../../models/todo';
   styleUrls: ['./todo-list.component.css']
 })
 export class TodoListComponent implements OnInit {
-
   // Initialize variable
   todos: Todo[] = [];
 
@@ -18,10 +17,15 @@ export class TodoListComponent implements OnInit {
     // todo object data
     this.todos = [
       {
-        content: 'do some work',
+        content: 'What needs to be done?',
+        completed: false
+      },
+      {
+        content: 'to be or not to be',
         completed: false
       }
     ]
+
   }
 
 }
