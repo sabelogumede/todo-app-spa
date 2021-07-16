@@ -7,6 +7,7 @@ import { Todo } from '../../models/todo';
   styleUrls: ['./todo-list.component.css']
 })
 export class TodoListComponent implements OnInit {
+
   // Initialize variable
   todos: Todo[] = [];
   inputTodo: string = "";
@@ -19,10 +20,6 @@ export class TodoListComponent implements OnInit {
     this.todos = [
       {
         content: 'What needs to be done?',
-        completed: false
-      },
-      {
-        content: 'to be or not to be',
         completed: false
       }
     ]
@@ -44,6 +41,11 @@ export class TodoListComponent implements OnInit {
 
     // clear the input field after adding item to list
     this.inputTodo = "";
+  }
+
+  // delete todo item
+  deleteTodoitem(id: number): void {
+    this.todos = this.todos.filter((value, i) => i !== id)
   }
 
 }
