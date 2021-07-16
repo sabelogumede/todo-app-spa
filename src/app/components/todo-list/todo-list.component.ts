@@ -57,4 +57,9 @@ export class TodoListComponent implements OnInit {
     })
   }
 
+  // list item count
+  itemsLefttodo(): number {
+    return this.todos.filter(todo => !todo.completed).length
+  }
+
 }
