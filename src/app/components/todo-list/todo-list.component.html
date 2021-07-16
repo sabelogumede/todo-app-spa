@@ -2,14 +2,17 @@
   <form action="#">
     <input
       type="text"
+      name="inputTodo"
       placeholder="What needs to be done?"
       class="todo-input"
+      [(ngModel)]="inputTodo"
+      (keyup.enter)="addTodo()"
     />
   </form>
 
-  <div class="todo">
+  <div class="todo" *ngFor="let todo of todos">
     <input type="checkbox" class="checkbox" />
-    <div class="content">list item one</div>
+    <div class="content">{{ todo.content }}</div>
     <div class="delete-todo">&times;</div>
   </div>
 
