@@ -11,7 +11,7 @@
   </form>
 
   <div class="todo" *ngFor="let todo of todos; let i = index">
-    <input type="checkbox" class="checkbox" />
+    <input type="checkbox" (click)="toggleCheckbox(i)" class="checkbox" />
     <div class="content">{{ todo.content }}</div>
     <div class="delete-todo" (click)="deleteTodoitem(i)">&times;</div>
   </div>
