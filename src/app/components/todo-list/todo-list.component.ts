@@ -50,7 +50,11 @@ export class TodoListComponent implements OnInit {
 
   // toggle checkbox
   toggleCheckbox(id: number): void {
-    this.todos = this.todos.filter((value, i) => i !== id)
+    this.todos.map((value, i) => {
+      if (i == id) value.completed = !value.completed;
+
+      return value;
+    })
   }
 
 }
