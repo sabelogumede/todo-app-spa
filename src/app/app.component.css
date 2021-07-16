@@ -1,0 +1,11 @@
+header {
+  background-color: grey;
+  color: #fff;
+  font-size: 12px;
+  font-weight: normal;
+  padding: 5px;
+}
+
+.container {
+  background-color: goldenrod;
+}
