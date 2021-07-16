@@ -1,11 +1,7 @@
 header {
-  background-color: grey;
+  background-color: #424242;
   color: #fff;
   font-size: 12px;
   font-weight: normal;
-  padding: 5px;
-}
-
-.container {
-  background-color: goldenrod;
+  padding: 4px 5px;
 }
