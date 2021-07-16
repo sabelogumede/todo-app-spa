@@ -9,6 +9,7 @@ import { Todo } from '../../models/todo';
 export class TodoListComponent implements OnInit {
   // Initialize variable
   todos: Todo[] = [];
+  inputTodo: string = "";
 
   constructor() { }
 
@@ -26,6 +27,23 @@ export class TodoListComponent implements OnInit {
       }
     ]
 
+  }
+
+  // methods
+  addTodo(): void {
+    // check if input area empty
+    if (this.inputTodo.trim().length == 0) {
+      return;
+    }
+
+    // add input item to list
+    this.todos.push({
+      content: this.inputTodo,
+      completed: false
+    })
+
+    // clear the input field after adding item to list
+    this.inputTodo = "";
   }
 
 }
