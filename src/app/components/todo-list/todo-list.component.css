@@ -1,0 +1,32 @@
+.todos {
+  max-width: 690px;
+  margin: 0 auto;
+}
+.todo-input {
+  display: block;
+  width: 100%;
+  padding: 10px 15px;
+  appearance: none;
+  background-color: #fff;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  outline: none;
+}
+
+.todo {
+  display: flex;
+  padding: 10px 15px;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+
+.todo .checkbox {
+  flex: 1 1 50px;
+}
+.todo .content {
+  flex: 1 1 100%;
+}
+
+.numberOfItem {
+  padding: 0 30px;
+}
