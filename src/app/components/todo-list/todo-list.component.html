@@ -10,10 +10,10 @@
     />
   </form>
 
-  <div class="todo" *ngFor="let todo of todos">
+  <div class="todo" *ngFor="let todo of todos; let i = index">
     <input type="checkbox" class="checkbox" />
     <div class="content">{{ todo.content }}</div>
-    <div class="delete-todo">&times;</div>
+    <div class="delete-todo" (click)="deleteTodoitem(i)">&times;</div>
   </div>
 
   <p class="numberOfItem">X items left to do</p>
