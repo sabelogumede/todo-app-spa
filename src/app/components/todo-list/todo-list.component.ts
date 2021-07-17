@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { Todo } from '../../models/todo';
+
 
 @Component({
   selector: 'app-todo-list',
@@ -12,6 +13,13 @@ export class TodoListComponent implements OnInit {
   inputTodo: string = "";
 
   constructor() { }
+
+  @ViewChild('input', { static: false })
+  set input(element: ElementRef<HTMLInputElement>) {
+    if (element) {
+      element.nativeElement.focus()
+    }
+  }
 
   ngOnInit(): void {
     this.inputTodo = "";
